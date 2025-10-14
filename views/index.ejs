@@ -13,7 +13,7 @@
             <a href="#home" class="nav-list">Home</a>
             <a href="#menu" class="nav-list">Menu</a>
             <a href="#" class="nav-list">About</a>
-            <a href="#" class="order-button">Order Now</a>
+            <a href="#order-now" class="order-button">Order Now</a>
         </div>
     </nav>
     <div class="hamburger" id="hamburger">
@@ -21,9 +21,9 @@
     </div>
 
     <section class="intro">
-        <h1>Welcome to Queeny’s Bakery</h1>
+        <h1>Welcome to <span class="logo">Queeny's </span> <span class="bakery">Bakery</span></h1>
         <p>Where every bite tells a story. From our kitchen to your table, we bake with love and the finest ingredients to bring you the taste of home in every slice.</p>
-        <button class="explore-button">View Menu</button>
+        <a href="#menu"><button class="explore-button">View Menu</button></a>
     </section>
 
 
@@ -49,13 +49,55 @@
         </div>
     </div>
 
-    <div>
-        <div>
-
+<div class="order-wrapper" id="order-now">
+    <div class="food-category"> 
+        <div class="button-category">
+            <button type="button" id="cake-btn" onclick="openCakeCategory()">Cake</button>
+            <button type="button" id="dish-btn" onclick="openDishCategory()">Dish</button>
+            <button type="button" id="other-btn" onclick="openOtherCategory()">Others</button>
+        </div>
+        <div class="img-category" id="cake-category">
+            <img src="src/images/cake.jpg">
+            <img src="src/images/lasagna.jpg">
+            <img src="src/images/pine.jpg">
+            <img src="src/images/donut.jpg">
+        </div>
+        <div class="img-category" id="dish-category" style="display:none">
+            <img src="src/images/mangofloat.jpg">
+            <img src="src/images/pic3.png">
+            <img src="src/images/pine.jpg">
+            <img src="src/images/donut.jpg">
+        </div>
+        <div class="img-category" id="other-category" style="display:none">
+            <img src="src/images/choco.jpg">
+            <img src="src/images/pine.jpg">
+            <img src="src/images/redvelvet.jpg">
+            <img src="src/images/donut.jpg">
         </div>
     </div>
-
+    <div class="input-form">
+        <form>
+            <h1>Order</h1>
+            <div>
+                <div class="input-order">
+                    <input type="text" placeholder="Type your order" name="food-order">
+                    <input type="text" placeholder="Firstname" name="firstname">
+                    <input type="text" placeholder="Lastname" name="lastname">
+                    <input type="text" placeholder="Email" name="email">
+                    <input type="text" placeholder="Address" name="address">
+                    <input type="text" placeholder="Contact Number" name="contact-number">
+                </div>
+                <div class="order-btn">
+                    <input type="submit" value="Order">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 </body>
+
+
+
 <footer>
     <div class="social-media-links">
          <img src="src/images/tik-tok.png">

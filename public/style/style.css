@@ -10,9 +10,9 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 10px 8%;
-    background-color: #ddd;
+    background-color: white;
+    box-shadow: 0 4px 12px black;
     height: 80px;
-    box-shadow: 0 4px 12px rgba(254, 254, 253, 0.959);
     position: fixed;
     top:0;
     left:0;
@@ -67,7 +67,7 @@ h1 .bakery{
     display: flex;
     justify-content: center;
     overflow-y: hidden;
-    background-color: black;
+    background-color: #ddd;
 }
 
 .dashboard-wrapper img{
@@ -88,14 +88,19 @@ h1 .bakery{
 .intro{
     position: absolute;
     left: 50%;
-    top: 40%;
+    top: 20%;
     transform:translateX(-50%);
     text-align: center;
     color: white;
 }
 
+.intro p{
+    font-size: 20px;
+    color: white
+}
+
 .intro h1{
-    font-size: 50px;
+    font-size: 70px;
 }
 
 .explore-button{
@@ -118,7 +123,7 @@ h1 .bakery{
     flex-direction: column;
     justify-content: center;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
 }
 
 .menu-images-content{
@@ -132,7 +137,7 @@ h1 .bakery{
     max-width: 250px;
     height: 270px;
     border-radius: 5%;
-    box-shadow: 0 10px 20px black;
+    box-shadow: 0 4px 8px black;
     cursor: pointer;
     transition: ease-in-out 0.3s;
 }
@@ -179,6 +184,100 @@ footer{
 #nav-links.active{
     display: flex;
 }
+
+.input-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-form form{
+    background-color: #fff;
+    padding: 30px 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.687);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.input-form .input-order{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.input-form .order-btn{
+    display: flex;
+    justify-content: center;
+}
+
+.input-form form input{
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 17px;
+}
+
+.input-form form input[type="submit"]{
+    background-color: rgb(194, 131, 15);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 50%;
+    transition: 0.3s ease-in-out;
+}
+
+.input-form form input[type="submit"]:hover{
+    background-color: orange;
+}
+
+.input-form form h1{
+    text-align: center;
+}
+
+.order-wrapper{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.order-wrapper .food-category{
+    max-width: 480px;   
+}
+.order-wrapper .food-category img{
+    height: 200px;
+    width: 200px;
+    border-radius: 5%;
+}
+
+.img-category{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.button-category{
+    margin-left: 15px;
+}
+.button-category button{
+    background-color: #fff;
+    color: black;
+    border: 1px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.687);
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    width: 80px;
+    transition: ease-in-out 0.3s;
+}
+
+.button-category button:hover{
+    background-color: orange;
+}
+
+
+
 
 @media screen and (max-width: 760px) {
   #nav-links{
@@ -242,7 +341,60 @@ footer{
 
   .intro{
     position: absolute;
-    top: 15%;
+    top: 10%;
+  }
+  
+  .order-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
   }
 
+  .input-form form{
+    padding: 5px;
+  }
+
+  .input-form form input{
+    font: 10px;
+  }
+
+  .intro p{
+    color: black;
+  }
+
+  .bakery-hero{
+    display:none;
+  }
+  
+  .food-category{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .food-category .img-category{
+  }
+  .food-category .img-category img{
+    width: 100px;
+    height: 100px;
+  }
+
+  .input-form form input{
+    padding: 8px
+  }
+
+  .input-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .input-form form{
+    padding: 10px;
+  }
+
+  .input-form .input-order{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+  
 }
