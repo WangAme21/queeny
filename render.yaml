@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: panyang-bakery
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DB_HOST
+        fromDatabase:
+          name: panyang-db
+          property: host
+      - key: DB_USER
+        fromDatabase:
+          name: panyang-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: panyang-db
+          property: password
+      - key: DB_NAME
+        fromDatabase:
+          name: panyang-db
+          property: database
+      - key: DB_PORT
+        fromDatabase:
+          name: panyang-db
+          property: port
+
+databases:
+  - name: panyang-db
+    plan: free
+    databaseName: queeny
+    user: panyang_user
