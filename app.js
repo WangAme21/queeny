@@ -5,6 +5,31 @@ const path = require('path');
 const db = require('./db.js');
 const router = require('./routes/router.js');
 
+// Auto-create users table if it doesn't exist
+const createUsersTable = async () => {
+    try {
+        const sql = `
+            CREATE TABLE IF NOT EXISTS users (
+                id SERIAL PRIMARY KEY,
+                firstname VARCHAR(255) NOT NULL,
+                lastname VARCHAR(255) NOT NULL,
+                email VARCHAR(255) UNIQUE NOT NULL,
+                birthdate DATE,
+                gender VARCHAR(10),
+                password VARCHAR(255) NOT NULL,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        `;
+        await db.query(sql);
+        console.log('✅ Users table created successfully!');
+    } catch (err) {
+        console.error('❌ Error creating users table:', err);
+    }
+};
+
+// Create table on startup
+createUsersTable();
+
 const app = express();
 const port = process.env.PORT || 3000;
 
