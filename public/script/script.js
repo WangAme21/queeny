@@ -11,17 +11,17 @@ hamburger.addEventListener("click", ()=>{
 function openDishCategory(){
     document.getElementById('cake-category').style.display = 'none';
     document.getElementById('other-category').style.display = 'none';
-    document.getElementById('dish-category').style.display = 'block';
+    document.getElementById('dish-category').style.display = 'grid';
 }
 
 function openCakeCategory(){
-    document.getElementById('cake-category').style.display = 'block';
+    document.getElementById('cake-category').style.display = 'grid';
     document.getElementById('other-category').style.display = 'none';
     document.getElementById('dish-category').style.display = 'none';
 }
 
 function openOtherCategory(){
     document.getElementById('cake-category').style.display = 'none';
-    document.getElementById('other-category').style.display = 'block';
+    document.getElementById('other-category').style.display = 'grid';
     document.getElementById('dish-category').style.display = 'none';
 }
