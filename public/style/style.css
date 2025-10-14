@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 8%;
+    background-color: #ddd;
+    height: 80px;
+    box-shadow: 0 4px 12px rgba(254, 254, 253, 0.959);
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 20;
+    box-sizing: border-box;
+}
+
+nav h1{
+    font-size: 38px;
+}
+
+h1 .bakery{
+    color: red;
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+  color: black;
+  font-size: 32px;
+}
+
+.nav-list{
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 19px;
+    color: black;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-list:hover{
+    color: orange;
+}
+
+.order-button{
+    background-color: rgb(194, 131, 15);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.order-button:hover{
+    background-color: orange;
+}
+
+.dashboard-wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow-y: hidden;
+    background-color: black;
+}
+
+.dashboard-wrapper img{
+    height: 80%;
+}
+
+.bakery-hero{
+    width: 40%
+}
+
+.dashboard-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.intro{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform:translateX(-50%);
+    text-align: center;
+    color: white;
+}
+
+.intro h1{
+    font-size: 50px;
+}
+
+.explore-button{
+    background-color: rgb(194, 131, 15);
+    padding: 8px 15px;
+    color: white;
+    border:none;
+    border-radius: 5px;
+    cursor:pointer;
+    transition: 0.3s ease-in-out;
+    font-size: 19px;
+}
+
+.explore-button:hover{
+    background-color: orange;
+}
+
+.menu-images-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.menu-images-content{
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+.menu-images-content img{
+    width: 100%;
+    max-width: 250px;
+    height: 270px;
+    border-radius: 5%;
+    box-shadow: 0 10px 20px black;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.menu-images-content img:hover{
+    transform: scale(1.1);
+}
+
+footer{
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.687);
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.footer-links a{
+    text-decoration: none;
+    color: white; 
+    margin-left: 17px;
+    transition: 0.3s ease-in-out;
+}
+
+.footer-links a:hover{
+    color: orange;
+}
+
+.social-media-links img{
+    width: 20x;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+.hamburger{
+    display: none;
+}
+
+#nav-links.active{
+    display: flex;
+}
+
+@media screen and (max-width: 760px) {
+  #nav-links{
+    color: white;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    padding: 20px;
+    background-color: #fff;
+    width: 100px;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+  }
+
+  .nav-list{
+    margin: 0 0 20px 0;
+  }
+
+  .order-button{
+    display: none;
+  }
+
+  .hamburger{
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    left: 5%;
+    top: 5%;
+    z-index: 50;
+
+  }
+
+  nav h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+  }
+
+  .menu-images-content img{
+    width: 100px;
+    height: 100px;
+  }
+
+  .dashboard-info img{
+    width: 150px;
+    height: 150px;
+  }
+
+  .dashboard-info{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-images-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intro{
+    position: absolute;
+    top: 15%;
+  }
+
+}
